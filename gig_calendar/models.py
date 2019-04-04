@@ -7,6 +7,6 @@ class Venue(models.Model):
 class Gig(models.Model):
     date = models.DateField()
     time = models.TimeField()
-    venue = models.ForeignKey(Venue)
+    venue = models.ForeignKey(Venue, on_delete=models.DO_NOTHING)
     description = models.CharField(max_length=1000)
     info_URL = models.URLField()
