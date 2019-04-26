@@ -13,3 +13,6 @@ class Gig(models.Model):
     venue = models.ForeignKey(Venue, on_delete=models.DO_NOTHING)
     description = models.CharField(max_length=1000)
     info_URL = models.URLField()
+    
+    def __str__(self): # 'The Green Mill on 04/28/2019'
+        return "{} on {}".format(self.venue, self.date)
