@@ -1,5 +1,14 @@
 <html>
+    <head>
+        <title>Frank Portolese | Jazz guitar</title>
+    </head>
     <body>
-        <p>Hello, Jazz World!</p>
+    {% for gig in gigs %}
+        <div>
+            <p>Date: {{ gig.date }}</p>
+            <p>Venue: {{ gig.venue }}</p>
+            <p><a href="{{ gig.info_URL }}">More info</a></p>
+        </div>
+    {% endfor %}
     </body>
 </html>
