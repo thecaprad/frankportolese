@@ -1,17 +1,25 @@
 {% extends 'gig_calendar/base.html' %}
 
 {% block content %}
-    {% for gig in gigs %}
-        <div class="gig">
-            <div class="gig">
-                <h1>Date: {{ gig.date }}</h1>
+    <div class="gig-calendar">
+        <h1>Gig calendar</h1>
+    </div>
+    <div class="container">
+        {% for gig in gigs %}
+            <div class="row">
+                <div class="col">
+                    <span class="gig-date-day">{{ gig.date|date:"d" }}</span>
+                    <span class="gig-date-month">{{ gig.date|date:"M" }}</span>
+                </div>
+                <div class="col-6">
+                    <span class="gig-venue">{{ gig.venue }}</span>
+                </div>
+                <div class="col">
+                    <span class="gig-info">
+                        <button type="button" class="btn btn-outline-dark">More info</button>
+                    </span>
+                </div>
             </div>
-            <div class="venue">
-                <p>Venue: {{ gig.venue }}</p>
-            </div>
-            <div class="venue-info">
-                <p><a href="{{ gig.info_URL }}">More info</a></p>
-            </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 {% endblock %}

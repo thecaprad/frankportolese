@@ -1,3 +1,7 @@
+h1, h2, h3, h4 {
+    font-family: 'EB Garamond', serif;
+}
+
 .page-header {
     margin-top: 0;
     padding: 20px 20px 20px 40px;
@@ -23,32 +27,34 @@
     margin-top: -10px;
 }
 
-.content {
-    margin-left: 40px;
+.container {
+    width: 65%;
 }
 
-h1, h2, h3, h4 {
+.gig-date-day {
     font-family: 'EB Garamond', serif;
+    font-size: 30pt;
+    position: relative;
+    bottom: 0;
 }
 
-.date {
-    color: #630808;
-
-.gig-form textarea, .gig-form input {
-    width: 100%;
+.gig-date-month {
+    font-family: 'EB Garamond', serif;
+    font-size: 18pt;
+    text-align: center;
+    position: relative;
+    bottom: 0;
 }
 
-.top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
-    float: right;
-    font-size: 26pt;
-    margin-right: 20px;
+.gig-venue {
+    font-family: 'EB Garamond', serif;
+    font-size: 40pt;
+    text-align: center;
+    position: relative;
+    bottom: 0;
 }
 
-.gig {
-    margin-bottom: 70px;
-}
-
-.gig h2 a, .gig h2 a:visited {
-    color: #000000;
+.gig-info {
+    position: relative;
+    padding-top: 5px;
 }
