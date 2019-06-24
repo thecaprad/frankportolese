@@ -1,14 +1,17 @@
-<html>
-    <head>
-        <title>Frank Portolese | Jazz guitar</title>
-    </head>
-    <body>
+{% extends 'gig_calendar/base.html' %}
+
+{% block content %}
     {% for gig in gigs %}
-        <div>
-            <p>Date: {{ gig.date }}</p>
-            <p>Venue: {{ gig.venue }}</p>
-            <p><a href="{{ gig.info_URL }}">More info</a></p>
+        <div class="gig">
+            <div class="gig">
+                <h1>Date: {{ gig.date }}</h1>
+            </div>
+            <div class="venue">
+                <p>Venue: {{ gig.venue }}</p>
+            </div>
+            <div class="venue-info">
+                <p><a href="{{ gig.info_URL }}">More info</a></p>
+            </div>
         </div>
     {% endfor %}
-    </body>
-</html>
+{% endblock %}
