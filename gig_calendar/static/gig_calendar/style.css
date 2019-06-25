@@ -31,6 +31,19 @@ h1, h2, h3, h4 {
     width: 65%;
 }
 
+.row {
+    position: relative;
+    border-top: solid;
+    border-bottom-color: grey;
+}
+
+.gig-calendar h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: 50pt;
+    margin-left: 35%;
+    padding-bottom: 50px;
+}
+
 .gig-date-day {
     font-family: 'EB Garamond', serif;
     font-size: 30pt;
@@ -50,11 +63,9 @@ h1, h2, h3, h4 {
     font-family: 'EB Garamond', serif;
     font-size: 40pt;
     text-align: center;
-    position: relative;
-    bottom: 0;
 }
 
-.gig-info {
+.gig-info button {
     position: relative;
-    padding-top: 5px;
+    margin-top: 21px;
 }
