@@ -12,9 +12,17 @@
         <div class="page-header">
             <h1><a href="/">Frank Portolese</a></h1>
             <h3>Chicago-style jazz guitar in sunny Florida.</h3>
+            <ul class="nav">
+                <li><a href="#">Home</a></li>
+                <li><a href="{% url 'gig_list' %}">Gigs</a></li>
+                <li><a href="#">Bio</a></li>
+                <li><a href="#">Media</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
-        {% block content %}
-        {% endblock %}
+            {% block content %}
+            {% endblock %}
         </div>
     </body>
 </html>
