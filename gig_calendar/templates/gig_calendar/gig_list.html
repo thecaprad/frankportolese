@@ -3,14 +3,14 @@
 {% block content %}
     <div class="container">
         <h3 class="text-center">Upcoming performances from Frank</h3><br>
-        {% for gig in gigs %}
+        {% for future_gig in future_gigs %}
             <div class="row">
                 <div class="col">
-                    <span class="gig-date-day">{{ gig.date|date:"d" }}</span>
-                    <span class="gig-date-month">{{ gig.date|date:"M" }}</span>
+                    <span class="gig-date-day">{{ future_gig.date|date:"d" }}</span>
+                    <span class="gig-date-month">{{ future_gig.date|date:"M" }}</span>
                 </div>
                 <div class="col-6">
-                    <span class="gig-venue">{{ gig.venue }}</span>
+                    <span class="gig-venue">{{ future_gig.venue }}</span>
                 </div>
                 <div class="col">
                     <span class="gig-info">
