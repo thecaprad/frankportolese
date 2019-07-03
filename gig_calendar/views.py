@@ -10,3 +10,6 @@ def gig_list(request):
         'gig_calendar/gig_list.html', 
         {'future_gigs': future_gigs}
         )
+
+def bio(request):
+    return render(request, 'gig_calendar/bio.html', {})
