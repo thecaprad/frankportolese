@@ -15,4 +15,12 @@ def bio(request):
     return render(request, 'gig_calendar/bio.html', {})
 
 def home(request):
-    return render(request, 'gig_calendar/home.html', {})
+    # TODO Refactor this. Create a utility that serves this and gig list
+    # similarly?
+    three_future_gigs = Gig.objects.filter(
+        date__gte=datetime.date.today()).order_by('date')[:3]
+    return render(
+        request, 
+        'gig_calendar/home.html', 
+        {'three_future_gigs': three_future_gigs}
+        )
