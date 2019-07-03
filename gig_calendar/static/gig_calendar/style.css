@@ -43,6 +43,16 @@ h1, h2, h3, h4 {
     position: relative;
 }
 
+.welcome-message {
+    font-family: 'EB Garamond', serif;
+    font-size: 20px;
+}
+
+.greeting {
+    font-family: 'Just Another Hand', cursive;
+    font-size: 30pt;
+}
+
 .gig-calendar h1 {
     font-family: 'EB Garamond', serif;
     font-size: 50pt;

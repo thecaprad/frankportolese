@@ -13,3 +13,6 @@ def gig_list(request):
 
 def bio(request):
     return render(request, 'gig_calendar/bio.html', {})
+
+def home(request):
+    return render(request, 'gig_calendar/home.html', {})
