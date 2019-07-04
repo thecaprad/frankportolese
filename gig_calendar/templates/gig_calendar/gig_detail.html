@@ -1,0 +1,22 @@
+{% extends 'gig_calendar/base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="gig-detail">
+            <h2 class="center">{{ gig.date }} - {{ gig.time|date:"P" }}</h2>
+            <h1 class="center">{{ gig.venue }}</h1>
+            <p class="center">
+                {{ gig.venue.address }} 
+                <a href="https://maps.google.com/place/{{ gig.venue.address }}">
+                    (directions)
+                </a>
+            </p>
+            {% if gig.description %}
+                {{ gig.description|linebreaks }}
+            {% endif %}
+            <p>
+                <a href="{% url 'gig_list' %}">Back to all gigs</a>
+            </p>
+        </div>
+    </div>
+{% endblock %}

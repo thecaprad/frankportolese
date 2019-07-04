@@ -1,5 +1,5 @@
 import datetime
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Venue, Gig
 
 def gig_list(request):
@@ -10,6 +10,10 @@ def gig_list(request):
         'gig_calendar/gig_list.html', 
         {'future_gigs': future_gigs}
         )
+
+def gig_detail(request, gig_id):
+    gig = get_object_or_404(Gig, id=gig_id)
+    return render(request, 'gig_calendar/gig_detail.html', {'gig': gig})
 
 def bio(request):
     return render(request, 'gig_calendar/bio.html', {})
