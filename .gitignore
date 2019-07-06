@@ -5,4 +5,4 @@ frankportolesevenv
 db.sqlite3
 /static
 .DS_Store
-
+SECRET_KEY.txt
