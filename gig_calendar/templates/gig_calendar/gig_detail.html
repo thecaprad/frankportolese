@@ -6,10 +6,12 @@
             <h2 class="center">{{ gig.date }} - {{ gig.time|date:"P" }}</h2>
             <h1 class="center">{{ gig.venue }}</h1>
             <p class="center">
+<!--
                 {{ gig.venue.address }} 
                 <a href="https://maps.google.com/place/{{ gig.venue.address }}">
                     (directions)
                 </a>
+-->
             </p>
             {% if gig.description %}
                 {{ gig.description|linebreaks }}
