@@ -7,23 +7,23 @@
         {% if three_future_gigs %}
             <div class="homepage-gigs">
                 <h3 class="text-center">
-                        Upcoming performances 
-                        <a href="{% url 'gig_list' %}">(see all)</a>
+                    Upcoming performances 
+                    <a href="{% url 'gig_list' %}">(see all)</a>
                 </h3><br>
                 <div class="d-flex">
-                        {% for future_gig in three_future_gigs %}
-                            <div class="col-4">
-                                <div class="homepage-gig">
-                                        <h4>
-                                            {{ future_gig.date|date:"M. j" }}
-                                            —
-                                            {{ future_gig.time|date:"P" }}
-                                        </h4>
-                                        <h3>{{ future_gig.venue }}</h3>
-                                        <a href="{% url 'gig_detail' future_gig.id %}">(More info)</a>
-                                </div>
+                    {% for future_gig in three_future_gigs %}
+                        <div class="col-4">
+                            <div class="homepage-gig">
+                                <h4>
+                                    {{ future_gig.date|date:"M. j" }}
+                                    —
+                                    {{ future_gig.time|date:"P" }}
+                                </h4>
+                                <h3>{{ future_gig.venue }}</h3>
+                                    <a href="{% url 'gig_detail' future_gig.id %}">(More info)</a>
                             </div>
-                        {% endfor %}
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
             <br>
