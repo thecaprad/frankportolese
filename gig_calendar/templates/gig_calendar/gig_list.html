@@ -14,7 +14,9 @@
                 </div>
                 <div class="col">
                     <span class="gig-info">
-                        <button type="button" class="btn btn-outline-dark">More info</button>
+                        <a href="{% url 'gig_detail' future_gig.id %}">
+                            <button type="button" class="btn btn-outline-dark">More info</button>
+                        </a>
                     </span>
                 </div>
             </div>
