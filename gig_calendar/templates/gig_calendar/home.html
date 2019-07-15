@@ -4,26 +4,73 @@
 {% block content %}
     <div class="container">
         <!-- Upcoming performances -->
-        {% if three_future_gigs %}
+
+        <!-- Gig list header -->
+        {% if future_gigs %}
             <div class="homepage-gigs">
                 <h3 class="text-center">
                     Upcoming performances 
                     <a href="{% url 'gig_list' %}">(see all)</a>
                 </h3><br>
                 <div class="d-flex">
-                    {% for future_gig in three_future_gigs %}
-                        <div class="col-4">
-                            <div class="homepage-gig">
-                                <h4>
-                                    {{ future_gig.date|date:"M. j" }}
-                                    —
-                                    {{ future_gig.time|date:"P" }}
-                                </h4>
-                                <h3>{{ future_gig.venue }}</h3>
-                                    <a href="{% url 'gig_detail' future_gig.id %}">(More info)</a>
+                    <!-- TODO See if this can be refactored to just deal with col -->
+                    <!-- 3 possible upcoming gigs -->
+                    {% if future_gigs|length == 3 %}
+                        {% for future_gig in future_gigs %}
+                            <div class="col-4">
+                                <div class="homepage-gig">
+                                    <h4>
+                                        {{ future_gig.date|date:"M. j" }}
+                                        —
+                                        {{ future_gig.time|date:"P" }}
+                                    </h4>
+                                    <h3>{{ future_gig.venue }}</h3>
+                                        <a href="{% url 'gig_detail' future_gig.id %}">
+                                            (More info)
+                                        </a>
+                                </div>
                             </div>
-                        </div>
-                    {% endfor %}
+                        {% endfor %}
+                    {% endif %}
+                    
+                    <!-- 2 possible upcoming gigs -->
+                    {% if future_gigs|length == 2 %}
+                        {% for future_gig in future_gigs %}
+                            <div class="col-6">
+                                <div class="homepage-gig">
+                                    <h4>
+                                        {{ future_gig.date|date:"M. j" }}
+                                        —
+                                        {{ future_gig.time|date:"P" }}
+                                    </h4>
+                                    <h3>{{ future_gig.venue }}</h3>
+                                        <a href="{% url 'gig_detail' future_gig.id %}">
+                                            (More info)
+                                        </a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    
+                    <!-- 1 upcoming gig -->
+                    {% if future_gigs|length == 1 %}
+                        {% for future_gig in future_gigs %}
+                            <div class="col-12">
+                                <div class="homepage-gig">
+                                    <h4>
+                                        {{ future_gig.date|date:"M. j" }}
+                                        —
+                                        {{ future_gig.time|date:"P" }}
+                                    </h4>
+                                    <h3>{{ future_gig.venue }}</h3>
+                                        <a href="{% url 'gig_detail' future_gig.id %}">
+                                            (More info)
+                                        </a>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                    
                 </div>
             </div>
             <br>

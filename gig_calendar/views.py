@@ -21,10 +21,11 @@ def bio(request):
 def home(request):
     # TODO Refactor this. Create a utility that serves this and gig list
     # similarly?
-    three_future_gigs = Gig.objects.filter(
+    # Future gigs are limited to a maximum of 3, though can be 2 or 1.
+    future_gigs = Gig.objects.filter(
         date__gte=datetime.date.today()).order_by('date')[:3]
     return render(
         request, 
         'gig_calendar/home.html', 
-        {'three_future_gigs': three_future_gigs}
+        {'future_gigs': future_gigs}
         )
