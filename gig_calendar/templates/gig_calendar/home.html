@@ -6,7 +6,7 @@
         <!-- Upcoming performances -->
 
         <!-- Gig list header -->
-        {% if future_gigs %}
+        {% if three_possible_future_gigs %}
             <div class="homepage-gigs">
                 <h3 class="text-center">
                     Upcoming performances 
@@ -15,12 +15,12 @@
                 <div class="d-flex">
                     <!-- Sets div spacing depending on the number of gigs -->
                     <!-- Maximum 3, minimum 1 -->
-                    {% for future_gig in future_gigs %}
-                        {% if future_gigs|length == 3 %}
+                    {% for future_gig in three_possible_future_gigs %}
+                        {% if three_possible_future_gigs|length == 3 %}
                             <div class="col-4">
-                        {% elif future_gigs|length == 2 %}
+                        {% elif three_possible_future_gigs|length == 2 %}
                             <div class="col-6">
-                        {% elif future_gigs|length == 1 %}
+                        {% elif three_possible_future_gigs|length == 1 %}
                             <div class="col-12">
                         {% endif %}
                                 <div class="homepage-gig">
