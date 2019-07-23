@@ -4,6 +4,12 @@ from django.db import models
 class Venue(models.Model):
     name = models.CharField(max_length=200)
     address = models.CharField(max_length=200)
+
+    def get_google_friendly_address(self):
+        google_query = "https://www.google.com/maps/search/?api=1&query="
+        google_address_step_1 = self.address.replace(" ", "+")
+        google_address_step_2 = google_address_step_1.replace(",", "%2C")
+        return google_query + google_address_step_2
     
     def __str__(self):
         return self.name

@@ -5,13 +5,15 @@
         <div class="gig-detail">
             <h2 class="center">{{ gig.date }} - {{ gig.time|date:"P" }}</h2>
             <h1 class="center">{{ gig.venue }}</h1>
-            <p class="center">
-<!--
-                {{ gig.venue.address }} 
-                <a href="https://maps.google.com/place/{{ gig.venue.address }}">
-                    (directions)
-                </a>
--->
+            {% if gig.venue.address %}
+                <p class="center">
+                    <u>Address:</u> {{ gig.venue.address }}
+                    <a href="{{ gig.venue.get_google_friendly_address }}">
+                        (directions)
+                    </a>
+                </p>
+            {% endif %}
+
             </p>
             {% if gig.description %}
                 {{ gig.description|linebreaks }}
