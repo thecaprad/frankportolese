@@ -7,7 +7,7 @@
             <h1 class="center">{{ gig.venue }}</h1>
             {% if gig.venue.address %}
                 <p class="center">
-                    <u>Address:</u> {{ gig.venue.address }}
+                    Address: {{ gig.venue.address }}
                     <a href="{{ gig.venue.get_google_friendly_address }}">
                         (directions)
                     </a>
