@@ -17,6 +17,7 @@ h1, h2, h3, h4 {
     background-repeat: no-repeat;
     background-size: 300px;
     background-color: #0E1817;
+    white-space: nowrap;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
