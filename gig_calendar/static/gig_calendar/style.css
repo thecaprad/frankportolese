@@ -73,22 +73,16 @@ h1, h2, h3, h4 {
 .gig-date-day {
     font-family: 'EB Garamond', serif;
     font-size: 30pt;
-    position: relative;
-    bottom: 0;
 }
 
 .gig-date-month {
     font-family: 'EB Garamond', serif;
     font-size: 18pt;
-    text-align: center;
-    position: relative;
-    bottom: 0;
 }
 
 .gig-venue {
     font-family: 'EB Garamond', serif;
     font-size: 40pt;
-    text-align: center;
 }
 
 .gig-info button {
