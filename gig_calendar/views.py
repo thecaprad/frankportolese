@@ -4,7 +4,7 @@ from .models import Venue, Gig
 
 def gig_list(request):
     gigs = Gig.objects.all().order_by('date')
-    future_gigs = Gig.objects.filter(date__gte=datetime.date.today())
+    future_gigs = Gig.objects.filter(date__gte=datetime.date.today()).order_by('date')
     return render(
         request, 
         'gig_calendar/gig_list.html', 
