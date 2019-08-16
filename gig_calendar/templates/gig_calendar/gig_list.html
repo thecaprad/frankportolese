@@ -2,24 +2,33 @@
 
 {% block content %}
     <div class="container">
-        <h3 class="text-center">Upcoming performances from Frank</h3><br>
-        {% for future_gig in future_gigs %}
-            <div class="row">
-                <div class="col">
-                    <span class="gig-date-day">{{ future_gig.date|date:"d" }}</span>
-                    <span class="gig-date-month">{{ future_gig.date|date:"M" }}</span>
+        {% if future_gigs %}
+            {% for future_gig in future_gigs %}
+                <div class="row">
+                    <div class="col">
+                        <span class="gig-date-day">{{ future_gig.date|date:"d" }}</span>
+                        <span class="gig-date-month">{{ future_gig.date|date:"M" }}</span>
+                    </div>
+                    <div class="col-6">
+                        <span class="gig-venue">{{ future_gig.venue }}</span>
+                    </div>
+                    <div class="col">
+                        <span class="gig-info">
+                            <a href="{% url 'gig_detail' future_gig.id %}">
+                                <button type="button" class="btn btn-outline-dark">More info</button>
+                            </a>
+                        </span>
+                    </div>
                 </div>
-                <div class="col-6">
-                    <span class="gig-venue">{{ future_gig.venue }}</span>
-                </div>
-                <div class="col">
-                    <span class="gig-info">
-                        <a href="{% url 'gig_detail' future_gig.id %}">
-                            <button type="button" class="btn btn-outline-dark">More info</button>
-                        </a>
-                    </span>
-                </div>
-            </div>
-        {% endfor %}
+            {% endfor %}
+        {% else %}
+            <h3 class="text-center">
+                There are currently no shows. Check back for updates.<br><br>
+                For now, please enjoy Frank's 
+                <a href="https://www.youtube.com/results?search_query=frank+portolese">
+                    work on YouTube.
+                </a>
+            </h3><br>
+        {% endif %}
     </div>
 {% endblock %}
