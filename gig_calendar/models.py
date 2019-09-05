@@ -29,3 +29,21 @@ class Gig(models.Model):
     
     def __str__(self): # 'The Green Mill on 04/28/2019'
         return "{} on {}".format(self.venue, self.date)
+
+class BlogPost(models.Model):
+    date = models.DateField(
+        blank=False,
+        null=False,
+    )
+    title = models.CharField(
+        max_length=200,
+        blank=False,
+        null=False
+    )
+    text = models.TextField(
+        blank=False,
+        null=False,
+    )
+
+    def __str__(self): # 'Can You HEAR It? on 04/12/2014'
+        return "{} on {}".format(self.title, self.date)
