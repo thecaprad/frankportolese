@@ -29,7 +29,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'gig_calendar',
-    'blog',
 ]
 
 MIDDLEWARE = [
