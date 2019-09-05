@@ -1,6 +1,6 @@
 import datetime
 from django.shortcuts import render, get_object_or_404
-from .models import Venue, Gig
+from .models import Venue, Gig, BlogPost
 
 def gig_list(request):
     gigs = Gig.objects.all().order_by('date')
@@ -14,6 +14,14 @@ def gig_list(request):
 def gig_detail(request, gig_id):
     gig = get_object_or_404(Gig, id=gig_id)
     return render(request, 'gig_calendar/gig_detail.html', {'gig': gig})
+
+def blog_post_detail(request, blog_post_id):
+    blog_post = get_object_or_404(BlogPost, id=blog_post_id)
+    return render(
+        request, 
+        'gig_calendar/blog_post_detail.html', 
+        {'blog_post': blog_post}
+        )
 
 def bio(request):
     return render(request, 'gig_calendar/bio.html', {})

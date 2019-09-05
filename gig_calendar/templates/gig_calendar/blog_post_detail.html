@@ -1,0 +1,11 @@
+{% extends 'gig_calendar/base.html' %}
+{% load staticfiles %}
+
+{% block content %}
+    <div class="container">
+        <h1>{{ blog_post.title }}</h1>
+        <h3>{{ blog_post.date }}</h3>
+        <p>{{ blog_post.text }}</p>
+    </div>
+    <br><br><br>
+{% endblock %}
