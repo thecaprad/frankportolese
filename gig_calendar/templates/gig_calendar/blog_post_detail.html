@@ -3,9 +3,11 @@
 
 {% block content %}
     <div class="container">
-        <h1>{{ blog_post.title }}</h1>
-        <h3>{{ blog_post.date }}</h3>
-        <p>{{ blog_post.text }}</p>
+        <h1 class="text-center">{{ blog_post.title }}</h1>
+        <h4 class="text-center">Published by Frank on <i>{{ blog_post.date }}</i></h4>
+        <div class="blog-post-text">
+            <p>{{ blog_post.text|linebreaks }}</p>
+        </div>
     </div>
     <br><br><br>
 {% endblock %}

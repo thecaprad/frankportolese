@@ -2,6 +2,10 @@ h1, h2, h3, h4 {
     font-family: 'EB Garamond', serif;
 }
 
+p {
+    font-family: 'EB Garamon', sans-serif;
+}
+
 .center {
   display: block;
   margin-left: auto;
@@ -98,6 +102,11 @@ h1, h2, h3, h4 {
 
 .gig-detail {
     text-align: center;
+}
+
+.blog-post-text {
+    padding-top: 5px;
+    font-size: 15pt;
 }
 
 .footer {
