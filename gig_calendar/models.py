@@ -45,5 +45,8 @@ class BlogPost(models.Model):
         null=False,
     )
 
+    def get_truncated_text(self):
+        return "{}...".format(self.text[:95])
+
     def __str__(self): # 'Can You HEAR It? on 04/12/2014'
         return "{} on {}".format(self.title, self.date)

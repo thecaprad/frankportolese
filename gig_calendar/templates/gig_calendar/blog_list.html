@@ -1,0 +1,13 @@
+{% extends 'gig_calendar/base.html' %}
+
+{% block content %}
+    <div class="container">
+        {% for blog_post in blog_posts %}
+            <div class="blog-list-title">
+                <h3>{{ blog_post.title }}</h3>
+                <h4>{{ blog_post.get_truncated_text }}</h4>
+                <p>Posted by Frank on <i>{{ blog_post.date }}</i></p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

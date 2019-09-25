@@ -15,6 +15,14 @@ def gig_detail(request, gig_id):
     gig = get_object_or_404(Gig, id=gig_id)
     return render(request, 'gig_calendar/gig_detail.html', {'gig': gig})
 
+def blog_list(request):
+    blog_posts = BlogPost.objects.all()
+    return render(
+        request,
+        'gig_calendar/blog_list.html',
+        {'blog_posts': blog_posts}
+    )
+
 def blog_post_detail(request, blog_post_id):
     blog_post = get_object_or_404(BlogPost, id=blog_post_id)
     return render(

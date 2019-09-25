@@ -109,6 +109,19 @@ p {
     font-size: 15pt;
 }
 
+.blog-list-title {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.blog-list-title h3 {
+    font-family: 'Catamaran', sans-serif;
+}
+
+.blog-list-title h4 {
+    font-family: 'Roboto', sans-serif;
+}
+
 .footer {
     position: fixed;
     bottom: 0;
