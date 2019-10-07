@@ -109,9 +109,21 @@ p {
     font-size: 15pt;
 }
 
+.blog-list-header {
+    margin: 0 auto;
+}
+
+.blog-list-image {
+    width: 80%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .blog-list-title {
     width: 80%;
     margin: 0 auto;
+    margin-top: 30px;
 }
 
 .blog-list-title h3 {

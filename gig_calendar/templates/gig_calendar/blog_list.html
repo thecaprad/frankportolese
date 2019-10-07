@@ -1,7 +1,11 @@
 {% extends 'gig_calendar/base.html' %}
+{% load staticfiles %}
 
 {% block content %}
     <div class="container">
+        <div class="blog-list-header">
+            <img class="blog-list-image" src="{% static 'gig_calendar/images/blog_header.png' %}"/>
+        </div>
         {% for blog_post in blog_posts %}
             <div class="blog-list-title">
                 <h3>{{ blog_post.title }}</h3>
