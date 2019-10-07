@@ -44,9 +44,19 @@ class BlogPost(models.Model):
         blank=False,
         null=False,
     )
+    slice_slug = models.CharField( # Soundslice slug for embedded lessons
+        max_length=5,
+        blank=True,
+        null=True
+    )
 
     def get_truncated_text(self):
         return "{}...".format(self.text[:95])
+
+    def get_soundslice_URL(self):
+        return "{}{}".format(
+            "https://www.soundslice.com/slices/", 
+            self.slice_slug)
 
     def __str__(self): # 'Can You HEAR It? on 04/12/2014'
         return "{} on {}".format(self.title, self.date)
