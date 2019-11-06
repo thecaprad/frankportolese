@@ -13,7 +13,7 @@
                         {{ blog_post.title }}
                         {% if blog_post.is_lesson %}
                             <span class="badge badge-light">Lesson</span>
-                        {% endfor %}
+                        {% endif %}
                     </a>
                 </h3>
                 <h4>{{ blog_post.get_truncated_text }}</h4>
