@@ -63,5 +63,8 @@ class BlogPost(models.Model):
             "https://www.soundslice.com/slices/", 
             self.slice_slug)
 
+    def get_youtube_slug(self):
+        return self.youtube_URL[-11:]
+
     def __str__(self): # 'Can You HEAR It? on 04/12/2014'
         return "{} on {}".format(self.title, self.date)
