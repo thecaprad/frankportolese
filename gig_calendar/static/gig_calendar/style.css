@@ -147,11 +147,8 @@ p {
     font-family: 'Roboto', sans-serif;
 }
 
-.blog-detail-soundslice-embed {
-    padding-bottom: 15px;
-}
-
 .blog-detail-bottom {
+    padding-top: 15px;
     font-family: 'Catamaran', sans-serif;
 }
 
