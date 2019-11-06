@@ -46,8 +46,8 @@ class BlogPost(models.Model):
     )
     is_lesson = models.BooleanField( # If a post is a lesson,
     # it will display a badge on the blog_list page.
-        blank=True,
-        null=True,
+        blank=False,
+        null=False,
     )
     slice_slug = models.CharField( # Soundslice slug for embedded lessons.
         max_length=5,
