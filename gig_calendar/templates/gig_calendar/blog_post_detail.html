@@ -3,18 +3,24 @@
 
 {% block content %}
     <div class="container">
-        <h1 class="text-center">{{ blog_post.title }}</h1>
-        <h4 class="text-center">Published by Frank on <i>{{ blog_post.date }}</i></h4>
-        <div class="blog-post-text">
+        <div class="blog-detail-title">
+            <h1 class="text-center">{{ blog_post.title }}</h1>
+            <p class="text-center">Published by Frank on <i>{{ blog_post.date }}</i></p>
+        </div>
+        <div class="blog-detail-text">
             <p>{{ blog_post.text|linebreaks }}</p>
         </div>
         {% if blog_post.slice_slug %}
-            <iframe src="{{ blog_post.get_soundslice_URL }}/embed-channelpost/" width="100%" height="300" frameborder="0"></iframe>
+            <div class="blog-detail-soundslice-embed">
+                <iframe src="{{ blog_post.get_soundslice_URL }}/embed-channelpost/" width="100%" height="400" frameborder="0"></iframe>
+                </div>
         {% endif %}
-        <h4 class="text-center">
-            ⇠
-            <a href="{% url 'blog_list' %}">Back to blog posts</a>
-        </h4>
+        <div class="blog-detail-bottom">
+            <h4 class="text-center">
+                ⇠
+                <a href="{% url 'blog_list' %}">Back to all blog posts</a>
+            </h4>
+        </div>
     </div>
     <br><br><br>
 {% endblock %}

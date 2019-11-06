@@ -104,11 +104,6 @@ p {
     text-align: center;
 }
 
-.blog-post-text {
-    padding-top: 5px;
-    font-size: 15pt;
-}
-
 .blog-list-header {
     margin: 0 auto;
 }
@@ -132,6 +127,32 @@ p {
 
 .blog-list-title h4 {
     font-family: 'Roboto', sans-serif;
+}
+
+.blog-detail-title h3 {
+    font-family: 'Catamaran', sans-serif;
+}
+
+.blog-detail-title p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.blog-detail-text {
+    padding-top: 5px;
+    font-size: 15pt;
+    padding-bottom: 15px;
+}
+
+.blog-detail-text p {
+    font-family: 'Roboto', sans-serif;
+}
+
+.blog-detail-soundslice-embed {
+    padding-bottom: 15px;
+}
+
+.blog-detail-bottom {
+    font-family: 'Catamaran', sans-serif;
 }
 
 .footer {
