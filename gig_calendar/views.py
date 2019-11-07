@@ -16,7 +16,7 @@ def gig_detail(request, gig_id):
     return render(request, 'gig_calendar/gig_detail.html', {'gig': gig})
 
 def blog_list(request):
-    blog_posts = BlogPost.objects.all()
+    blog_posts = BlogPost.objects.all().order_by('-date')
     return render(
         request,
         'gig_calendar/blog_list.html',
