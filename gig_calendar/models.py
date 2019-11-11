@@ -49,11 +49,6 @@ class BlogPost(models.Model):
         blank=False,
         null=False,
     )
-    slice_slug = models.CharField( # Soundslice slug for embedded lessons.
-        max_length=5,
-        blank=True,
-        null=True
-    )
     youtube_URL = models.CharField( # YouTube URL for embedded videos.
         max_length=28,
         blank=True,
