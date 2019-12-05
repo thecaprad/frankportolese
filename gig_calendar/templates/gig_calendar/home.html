@@ -24,12 +24,12 @@
                             <div class="col-12">
                         {% endif %}
                                 <div class="homepage-gig">
+                                    <h3>{{ future_gig.venue }}</h3>
                                     <h4>
                                         {{ future_gig.date|date:"M. j" }}
                                         —
                                         {{ future_gig.time|date:"P" }}
                                     </h4>
-                                    <h3>{{ future_gig.venue }}</h3>
                                     <a href="{% url 'gig_detail' future_gig.id %}">
                                         (More info)
                                     </a>
