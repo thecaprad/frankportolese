@@ -162,13 +162,6 @@ p {
     float: left;
 }
 
-/*
-.footer {
-    position: fixed;
-    bottom: 0;
-}
-*/
-
 .footer {
    position: fixed;
    left: 0;
