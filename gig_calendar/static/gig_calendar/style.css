@@ -153,12 +153,20 @@ p {
     font-family: 'Catamaran', sans-serif;
 }
 
-
 .bio-img-right-copy img {
     float: right;
 }
 
 .bio-img-left-copy img {
+    float: left;
+}
+
+.contact {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14pt;
+}
+
+.contact img {
     float: left;
 }
 

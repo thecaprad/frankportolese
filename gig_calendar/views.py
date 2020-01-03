@@ -37,6 +37,9 @@ def bio(request):
 def media(request):
     return render(request, 'gig_calendar/media.html', {})
 
+def contact(request):
+    return render(request, 'gig_calendar/contact.html', {})
+
 def home(request):
     # TODO Refactor this. Create a utility that serves this and gig list
     # similarly?
