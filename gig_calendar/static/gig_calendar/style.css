@@ -162,15 +162,17 @@ p {
     float: left;
 }
 
+/*
 .footer {
     position: fixed;
     bottom: 0;
 }
+*/
 
 .footer {
    position: fixed;
    left: 0;
-   bottom: 0;
+   bottom: -2px;
    width: 100%;
    padding-top: 10px;
    background-color: #101717;
