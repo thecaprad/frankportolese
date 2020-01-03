@@ -153,6 +153,11 @@ p {
     font-family: 'Catamaran', sans-serif;
 }
 
+.bio-copy {
+    font-family: 'Roboto', sans-serif;
+    font-size: 12pt;
+}
+
 .bio-img-right-copy img {
     float: right;
 }
