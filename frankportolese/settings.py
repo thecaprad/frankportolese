@@ -1,25 +1,16 @@
 import os, platform
 
-
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
 with open('SECRET_KEY.txt') as f:
     SECRET_KEY = f.read().strip()
 
 if platform.node() == "Coreys-MacBook-Air.local":
     DEBUG = True
-    ALLOWED_HOSTS = ['127.0.0.1']
+    ALLOWED_HOSTS = ['127.0.0.1', '10.0.1.2']
 else:
     DEBUG = False
     ALLOWED_HOSTS = ['.pythonanywhere.com', '.frankportolese.com']
-
-# Application definition
 
 INSTALLED_APPS = [
     'django.contrib.admin',
