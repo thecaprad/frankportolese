@@ -153,6 +153,15 @@ p {
     font-family: 'Catamaran', sans-serif;
 }
 
+
+.bio-img-right-copy img {
+    float: right;
+}
+
+.bio-img-left-copy img {
+    float: left;
+}
+
 .footer {
     position: fixed;
     bottom: 0;
