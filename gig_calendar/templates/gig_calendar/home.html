@@ -4,7 +4,6 @@
 {% block content %}
     <div class="container">
         <!-- Upcoming performances -->
-
         <!-- Gig list header -->
         {% if three_possible_future_gigs %}
             <div class="homepage-gigs">
@@ -39,6 +38,11 @@
                 </div>
             </div>
             <br>
+        {% else %}
+        <!-- Latest Blog post if no gigs -->
+            <div class="alert alert-primary" role="alert">
+                Lastest blog post: <a href="{% url 'blog_post_detail' latest_blog_post.id %}">{{ latest_blog_post.title }} ({{ latest_blog_post.date }})</a>
+            </div>
         {% endif %}
 
         <!-- Welcome message -->

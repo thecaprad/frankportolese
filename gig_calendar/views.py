@@ -43,8 +43,12 @@ def home(request):
     # Future gigs are limited to a maximum of 3, though can be 2 or 1.
     three_possible_future_gigs = Gig.objects.filter(
         date__gte=datetime.date.today()).order_by('date')[:3]
+    latest_blog_post = BlogPost.objects.latest('date')
     return render(
         request, 
         'gig_calendar/home.html', 
-        {'three_possible_future_gigs': three_possible_future_gigs}
+        {
+            'three_possible_future_gigs': three_possible_future_gigs,
+            'latest_blog_post': latest_blog_post
+        }
         )
