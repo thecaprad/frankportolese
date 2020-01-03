@@ -3,43 +3,22 @@
 
 {% block content %}
     <div class="container">
-        <!-- Upcoming performances -->
-        <!-- Gig list header -->
+        <!-- Upcoming gigs -->
         {% if three_possible_future_gigs %}
-            <div class="homepage-gigs">
-                <h3 class="text-center">
-                    Upcoming performances 
-                    <a href="{% url 'gig_list' %}">(see all)</a>
-                </h3><br>
-                <div class="d-flex">
-                    <!-- Sets div spacing depending on the number of gigs -->
-                    <!-- Maximum 3, minimum 1 -->
-                    {% for future_gig in three_possible_future_gigs %}
-                        {% if three_possible_future_gigs|length == 3 %}
-                            <div class="col-4">
-                        {% elif three_possible_future_gigs|length == 2 %}
-                            <div class="col-6">
-                        {% elif three_possible_future_gigs|length == 1 %}
-                            <div class="col-12">
-                        {% endif %}
-                                <div class="homepage-gig">
-                                    <h3>{{ future_gig.venue }}</h3>
-                                    <h4>
-                                        {{ future_gig.date|date:"M. j" }}
-                                        —
-                                        {{ future_gig.time|date:"P" }}
-                                    </h4>
-                                    <a href="{% url 'gig_detail' future_gig.id %}">
-                                        (More info)
-                                    </a>
-                                </div>
-                            </div>
-                    {% endfor %}    
-                </div>
-            </div>
-            <br>
+        <div class="alert alert-info" role="alert">
+                Upcoming shows: 
+                {% for gig in three_possible_future_gigs %}
+                    <a href="{% url 'gig_detail' gig.id %}">
+                        {{ gig.venue }}
+                        ({{ gig.date|date:"M. j" }})
+                    </a>
+                    {% if not forloop.last %}
+                        |
+                    {% endif %}
+                {% endfor %}
+        </div>
         {% else %}
-        <!-- Latest Blog post if no gigs -->
+        <!-- Show latest blog post if no gigs -->
             <div class="alert alert-primary" role="alert">
                 Lastest blog post: <a href="{% url 'blog_post_detail' latest_blog_post.id %}">{{ latest_blog_post.title }} ({{ latest_blog_post.date }})</a>
             </div>
