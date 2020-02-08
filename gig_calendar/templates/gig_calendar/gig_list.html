@@ -3,23 +3,20 @@
 {% block content %}
     <div class="container">
         {% if future_gigs %}
+            <span class="gig-row-header">Upcoming date / Venue</span>
+            <div class="gig-row-divider"></div>
             {% for future_gig in future_gigs %}
-                <div class="row">
-                    <div class="col">
-                        <span class="gig-date-day">{{ future_gig.date|date:"d" }}</span>
-                        <span class="gig-date-month">{{ future_gig.date|date:"M" }}</span>
-                    </div>
-                    <div class="col-6">
-                        <span class="gig-venue">{{ future_gig.venue }}</span>
-                    </div>
-                    <div class="col">
-                        <span class="gig-info">
-                            <a href="{% url 'gig_detail' future_gig.id %}">
-                                <button type="button" class="btn btn-outline-dark">More info</button>
-                            </a>
-                        </span>
-                    </div>
+                <div class="gig-row">
+                    <span class="gig-row-day">{{ future_gig.date|date:"d" }}</span>
+                    <span class="gig-row-month">{{ future_gig.date|date:"M" }}</span>
+                    <span class="gig-venue">{{ future_gig.venue }}</span>
+                    <span class="gig-row-info">
+                        <a href="{% url 'gig_detail' future_gig.id %}">
+                            <button type="button" class="btn btn-outline-dark">More info</button>
+                        </a>
+                    </span>
                 </div>
+                <div class="gig-row-divider"></div>
             {% endfor %}
         {% else %}
             <h3 class="text-center">
