@@ -98,25 +98,29 @@ p {
     display: inline-block;
     font-family: 'EB Garamond', serif;
     font-size: 30pt;
+    vertical-align: middle;
 }
 
 .gig-row-month {
     display: inline-block;
     font-family: 'EB Garamond', serif;
     font-size: 18pt;
+    vertical-align: middle;
 }
 
-.gig-venue {
+.gig-row-venue {
     display: inline-block;
     font-family: 'Roboto', sans-serif;
     font-size: 15pt;
     margin-left: 30px;
+    width: 300px;
+    vertical-align: middle;
 }
 
 .gig-row-info {
     display: inline;
     float: right;
-    padding-top: 15px;
+    vertical-align: middle;
 }
 
 .gig-detail {

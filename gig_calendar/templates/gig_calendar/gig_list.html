@@ -9,7 +9,7 @@
                 <div class="gig-row">
                     <span class="gig-row-day">{{ future_gig.date|date:"d" }}</span>
                     <span class="gig-row-month">{{ future_gig.date|date:"M" }}</span>
-                    <span class="gig-venue">{{ future_gig.venue }}</span>
+                    <span class="gig-row-venue">{{ future_gig.venue }}</span>
                     <span class="gig-row-info">
                         <a href="{% url 'gig_detail' future_gig.id %}">
                             <button type="button" class="btn btn-outline-dark">More info</button>
