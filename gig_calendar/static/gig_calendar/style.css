@@ -13,19 +13,6 @@ body {
     margin: 0 auto;
 }
 
-/* nav {
-    background-color: #343a40;
-    width: 100%;
-    height: 54px;
-    display: block;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    text-align: center;
-    float: left;
-    padding-left: 13px;
-} */
-
 #links {
     display: none;
 }
@@ -81,6 +68,36 @@ nav a {
     text-decoration: none;
 }
 
+#page-header {
+    height: 230px;
+    background: url("images/8.jpg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position-y: 40%;
+    background-position-x: -40%;
+    background-color: #0b1514;
+    padding-top: 1px;
+}
+
+#banner-welcome h1, #banner-welcome h1 a, #banner-welcome h1 a:visited, #banner-welcome h1 a:active {
+    display: none;
+    /* MOVE THE FOLLOWING TO MEDIA QUERY */
+    color: #ffffff;
+    font-size: 23pt;
+    text-decoration: none;
+    margin-left: 80px;
+}
+
+#banner-welcome h3 {
+    display: none;
+    color: #ffffff;
+    font-size: 17px;
+    margin-left: 190px;
+    padding-top: 5px;
+    margin-top: -10px;
+}
+
 .center {
   display: block;
   margin-left: auto;
@@ -94,31 +111,7 @@ nav a {
     justify-content: center;
 }
 
-.page-header {
-    margin-top: 0;
-    padding: 20px 20px 20px 40px;
-    height: 220px;
-    background: url("images/header.png");
-    background-repeat: no-repeat;
-    background-size: 300px;
-    background-color: #0E1817;
-    white-space: nowrap;
-}
 
-.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
-    font-size: 40pt;
-    text-decoration: none;
-    margin-top: 44px;
-    margin-left: 150px;
-}
-
-.page-header h3 {
-    color: #ffffff;
-    font-size: 22px;
-    margin-left: 340px;
-    margin-top: -10px;
-}
 
 .container {
     width: 65%;
@@ -294,11 +287,22 @@ nav a {
         margin: 0 auto;
         overflow: hidden;
         position: relative;
-        background-color: blue;
     }
 
     nav a {
         display: inline-block;
         line-height: 2.35em;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    #top-link.active {
+        display: none;
+    }
+
+    #links {
+        display: block;
     }
 }
