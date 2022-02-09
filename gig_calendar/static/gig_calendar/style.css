@@ -130,18 +130,23 @@ nav a {
     margin: 0 auto;
 }
 
-.row {
-    position: relative;
+.container p {
+    font-size: 20px;
 }
 
-.welcome-message {
-    font-family: 'EB Garamond', serif;
-    font-size: 20px;
+.row {
+    position: relative;
 }
 
 .greeting {
     font-family: 'Just Another Hand', cursive;
     font-size: 30pt;
+}
+
+#homepage-video {
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
 }
 
 .homepage-gigs {
@@ -281,11 +286,25 @@ nav a {
    left: 0;
    bottom: -2px;
    width: 100%;
-   padding-top: 10px;
    background-color: #101717;
    color: white;
    font-size: 10pt;
    text-align: center;
+}
+
+.footer p {
+    line-height: 1.5rem;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    text-decoration: none;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
 
 /* DESKTOP QUERY */
@@ -349,7 +368,11 @@ nav a {
         padding-left: 380px;
     }
 
+    #homepage-video {
+        height: 400px;
+    }
+
     .container {
-        width: 65%;
+        width: 55%;
     }
 }
