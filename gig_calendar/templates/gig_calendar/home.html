@@ -19,7 +19,7 @@
         </div>
         {% else %}
         <!-- Show latest blog post if no gigs -->
-            <div class="alert alert-primary" role="alert">
+            <div class="alert">
                 Lastest blog post: <a href="{% url 'blog_post_detail' latest_blog_post.id %}">{{ latest_blog_post.title }} ({{ latest_blog_post.date }})</a>
             </div>
         {% endif %}
