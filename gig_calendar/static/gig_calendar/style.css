@@ -69,7 +69,7 @@ nav a {
 }
 
 #page-header {
-    height: 230px;
+    height: 180px;
     background: url("images/8.jpg");
     background-size: 100%;
     background-repeat: no-repeat;
@@ -80,22 +80,8 @@ nav a {
     padding-top: 1px;
 }
 
-#banner-welcome h1, #banner-welcome h1 a, #banner-welcome h1 a:visited, #banner-welcome h1 a:active {
+#page-header h1, #page-header h3 {
     display: none;
-    /* MOVE THE FOLLOWING TO MEDIA QUERY */
-    color: #ffffff;
-    font-size: 23pt;
-    text-decoration: none;
-    margin-left: 80px;
-}
-
-#banner-welcome h3 {
-    display: none;
-    color: #ffffff;
-    font-size: 17px;
-    margin-left: 190px;
-    padding-top: 5px;
-    margin-top: -10px;
 }
 
 .center {
@@ -304,5 +290,37 @@ nav a {
 
     #links {
         display: block;
+    }
+
+    #page-header {
+        margin-top: 0;
+        height: 220px;
+        background: url("images/header.png");
+        background-color: rgba(0, 0, 0, 0);
+        background-repeat: repeat;
+        background-size: auto;
+        background-repeat: no-repeat;
+        background-size: 300px;
+        background-color: #0E1817;
+        white-space: nowrap;
+        color: #ffffff;
+    }
+
+    #page-header h1 {
+        display: block;
+        font-size: 40pt;
+        padding-top: 26px;
+        padding-left: 345px;
+        margin-bottom: 0;
+        font-weight: 500;
+    }
+
+    #page-header h3 {
+        display: block;
+        font-size: 16pt;
+        font-weight: 400;
+        margin-top: -5px;
+        font-family: 'EB Garamond', serif;
+        padding-left: 380px;
     }
 }
