@@ -141,6 +141,13 @@ nav a {
     margin: 0 auto;
 }
 
+.blog-detail-container {
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 27px;
+    margin: 0 auto;
+}
+
 .row {
     position: relative;
 }
@@ -314,11 +321,26 @@ nav a {
 
 .blog-detail-text p {
     font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
 }
 
-.blog-detail-bottom {
+.blog-detail-bottom h4 {
     padding-top: 15px;
     font-family: 'Catamaran', sans-serif;
+    text-align: center;
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.blog-detail-bottom h4 a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.blog-detail-bottom h4 a:hover {
+    color: #004c9e;
+    text-decoration: underline;
 }
 
 .blog-list-title {
@@ -375,6 +397,32 @@ nav a {
     vertical-align: middle;
     border-radius: .25rem;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.blog-detail-title {
+    color: #212529;
+    text-align: center;
+}
+
+.blog-detail-title p:first-of-type {
+    margin-bottom: 0;
+}
+
+.blog-detail-title h1 {
+    font-family: 'EB Garamond', serif;
+    font-size: 2.7rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.blog-detail-title p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin-top: 0;
 }
 
 .bio-copy {
@@ -508,5 +556,9 @@ nav a {
     .blog-list-title h3 {
         font-size: 1.85rem;
         margin-top: 1rem;
+    }
+
+    .blog-detail-container {
+        width: 65%;
     }
 }
