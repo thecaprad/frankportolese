@@ -148,10 +148,6 @@ nav a {
     margin: 0 auto;
 }
 
-.row {
-    position: relative;
-}
-
 .greeting {
     font-family: 'Just Another Hand', cursive;
     font-size: 30pt;
@@ -417,6 +413,15 @@ nav a {
     margin-bottom: 0;
 }
 
+.blog-detail-title {
+    font-family: 'EB Garamond', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
 .blog-detail-title p {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
@@ -426,16 +431,37 @@ nav a {
 }
 
 .bio-copy {
+    margin-bottom: 1.75rem;
+}
+
+.bio-copy p {
     font-family: 'Roboto', sans-serif;
-    font-size: 12pt;
+    font-size: 13pt;
+    line-height: 1.5rem;
 }
 
 .bio-img-right-copy img {
-    float: right;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 250px;
 }
 
 .bio-img-left-copy img {
-    float: left;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    width: 250px;
+}
+
+#bio-last-image {
+    text-align: center;
+    margin-top: 0;
+}
+
+#bio-last-image img {
+    margin-bottom: 40px;
+    width: 80%;
 }
 
 .contact {
@@ -560,5 +586,29 @@ nav a {
 
     .blog-detail-container {
         width: 65%;
+    }
+
+    .bio-img-right-copy img {
+        float: right;
+        margin-top: 6px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 5px;
+    }
+
+    .bio-img-left-copy img {
+        float: left;
+        margin-top: 6px;
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-bottom: 5px;
+    }
+
+    .bio-copy {
+        margin-bottom: 4rem;
+    }
+
+    #bio-last-image img {
+        width: 40%;
     }
 }
