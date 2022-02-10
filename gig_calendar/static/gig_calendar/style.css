@@ -241,8 +241,34 @@ nav a {
     border-color: #343a40;
 }
 
-.gig-detail {
+#gig-detail {
     text-align: center;
+}
+
+#gig-detail h1 {
+    font-size: 30pt;
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+#gig-detail h2 {
+    font-weight: 500;
+    width: 100%;
+}
+
+#gig-detail p {
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+#gig-detail p a {
+    color: black;
+}
+
+#gig-detail p a:hover {
+    color: rgba(0, 0, 0, 0.486);
 }
 
 .blog-list-header {

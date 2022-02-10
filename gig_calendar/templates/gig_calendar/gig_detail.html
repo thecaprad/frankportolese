@@ -2,9 +2,9 @@
 
 {% block content %}
     <div class="container">
-        <div class="gig-detail">
-            <h2 class="center">{{ gig.date }} - {{ gig.time|date:"P" }} {{ gig.date|date:"(l)" }}</h2>
+        <div id="gig-detail">
             <h1 class="center">{{ gig.venue }}</h1>
+            <h2 class="center">{{ gig.date }} - {{ gig.time|date:"P" }} {{ gig.date|date:"(l)" }}</h2>
             {% if gig.venue.address %}
                 <p class="center">
                     Address: {{ gig.venue.address }}
