@@ -159,16 +159,21 @@ nav a {
     width: 100%;
 }
 
-.gig-row {
+#gig-row {
     position: relative;
     width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
 }
 
-.gig-row-header {
+#gig-row div {
+    display: inline-block;
+}
+
+#gig-row-header {
     position: relative;
     width: 100%;
+    font-family: 'Roboto', sans-serif;
 }
 
 .gig-row-divider {
@@ -178,22 +183,25 @@ nav a {
     background-color: #000000;
 }
 
-.gig-row-day {
+#gig-date {
     display: inline-block;
+}
+
+#gig-date span {
     font-family: 'EB Garamond', serif;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+#gig-row-day {
     font-size: 30pt;
-    vertical-align: middle;
 }
 
-.gig-row-month {
-    display: inline-block;
-    font-family: 'EB Garamond', serif;
+#gig-row-month {
     font-size: 18pt;
-    vertical-align: middle;
 }
 
-.gig-row-venue {
-    display: inline-block;
+#gig-row-venue {
     font-family: 'Roboto', sans-serif;
     font-size: 15pt;
     margin-left: 30px;
@@ -201,10 +209,36 @@ nav a {
     vertical-align: middle;
 }
 
-.gig-row-info {
-    display: inline;
+#gig-info {
     float: right;
-    vertical-align: middle;
+    margin-top: 6px;
+}
+
+#gig-info-button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    color: #343a40;
+    border-color: #343a40;
+}
+
+#gig-info-button:hover {
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
 }
 
 .gig-detail {

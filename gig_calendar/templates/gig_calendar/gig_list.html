@@ -3,26 +3,35 @@
 {% block content %}
     <div class="container">
         {% if future_gigs %}
-            <span class="gig-row-header">Upcoming date / Venue</span>
+            <p id="gig-row-header">Upcoming date / Venue</p>
             <div class="gig-row-divider"></div>
             {% for future_gig in future_gigs %}
-                <div class="gig-row">
-                    <span class="gig-row-day">{{ future_gig.date|date:"d" }}</span>
-                    <span class="gig-row-month">{{ future_gig.date|date:"M" }}</span>
-                    <span class="gig-row-venue">{{ future_gig.venue }}</span>
-                    <span class="gig-row-info">
-                        <a href="{% url 'gig_detail' future_gig.id %}">
-                            <button type="button" class="btn btn-outline-dark">More info</button>
-                        </a>
-                    </span>
+                <div id="gig-row">
+                    <div id="gig-date">
+                        <span id="gig-row-day">{{ future_gig.date|date:"d" }}</span>
+                        <span id="gig-row-month">{{ future_gig.date|date:"M" }}</span>
+                    </div>
+                    <div id="gig-venue">
+                        <span id="gig-row-venue">{{ future_gig.venue }}</span>
+                    </div>
+                    <div id="gig-info">
+                        <span id="gig-row-info">
+                            <a href="{% url 'gig_detail' future_gig.id %}">
+                                <button id="gig-info-button" type="button">More info</button>
+                            </a>
+                        </span>
+                    </div>
                 </div>
                 <div class="gig-row-divider"></div>
             {% endfor %}
         {% else %}
-            <h3 class="text-center">
-                There are currently no shows. Check back for updates.<br><br>
+            <h3 style="text-align: center;
+                margin-bottom: 1.5rem;
+                font-weight: 500;
+                line-height: 1.2;
+                font-size: 1.4rem;">There are currently no shows. Check back for updates.<br><br>
                 For now, please enjoy Frank's 
-                <a href="https://www.youtube.com/results?search_query=frank+portolese">
+                <a href="https://www.youtube.com/results?search_query=frank+portolese" style="color: black;">
                     work on YouTube.
                 </a>
             </h3><br>
