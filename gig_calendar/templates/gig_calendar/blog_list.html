@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block content %}
-    <div class="container">
+    <div class="blog-container">
         <div class="blog-list-header">
             <img class="blog-list-image" src="{% static 'gig_calendar/images/blog_header.png' %}"/>
         </div>
@@ -12,7 +12,7 @@
                     <a href="{% url 'blog_post_detail' blog_post.id %}">
                         {{ blog_post.title }}
                         {% if blog_post.is_lesson %}
-                            <span class="badge badge-light">Lesson</span>
+                            <span class="badge">Lesson</span>
                         {% endif %}
                     </a>
                 </h3>

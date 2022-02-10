@@ -134,6 +134,13 @@ nav a {
     font-size: 20px;
 }
 
+.blog-container {
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 27px;
+    margin: 0 auto;
+}
+
 .row {
     position: relative;
 }
@@ -293,32 +300,10 @@ nav a {
 }
 
 .blog-list-image {
-    width: 80%;
+    width: 100%;
     display: block;
     margin-left: auto;
     margin-right: auto;
-}
-
-.blog-list-title {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 30px;
-}
-
-.blog-list-title h3 {
-    font-family: 'Catamaran', sans-serif;
-}
-
-.blog-list-title h4 {
-    font-family: 'Roboto', sans-serif;
-}
-
-.blog-detail-title h3 {
-    font-family: 'Catamaran', sans-serif;
-}
-
-.blog-detail-title p {
-    font-family: 'Roboto', sans-serif;
 }
 
 .blog-detail-text {
@@ -334,6 +319,62 @@ nav a {
 .blog-detail-bottom {
     padding-top: 15px;
     font-family: 'Catamaran', sans-serif;
+}
+
+.blog-list-title {
+    font-size: 1.75rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-top: 0;
+    width: 100%;
+}
+
+.blog-list-title a {
+    color: #007bff;
+    text-decoration: none;
+    margin-bottom: 0;
+}
+
+.blog-list-title a:hover {
+    text-decoration: underline;
+    color: #004c9e;
+}
+
+.blog-list-title h3 {
+    margin-top: 1.5rem;
+    margin-bottom: .5rem;
+    line-height: 1.2;
+    font-size: 1.65rem;
+    font-family: 'Catamaran', sans-serif;
+}
+
+.blog-list-title h4 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-size: 1.2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.blog-list-title p {
+    margin-top: 0;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+.badge {
+    color: #212529;
+    background-color: #f8f9fa;
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 50%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: .25rem;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
 
 .bio-copy {
@@ -454,5 +495,18 @@ nav a {
 
     #media-video iframe {
         height: 390px;
+    }
+
+    .blog-container {
+        width: 50%;
+    }
+
+    .blog-list-image {
+        width: 100%;
+    }
+
+    .blog-list-title h3 {
+        font-size: 1.85rem;
+        margin-top: 1rem;
     }
 }
