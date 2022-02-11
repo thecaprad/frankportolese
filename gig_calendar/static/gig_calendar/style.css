@@ -462,7 +462,7 @@ nav a {
 }
 
 .contact {
-    font-size: 14pt;
+    font-size: 13pt;
 }
 
 .contact a {
@@ -477,7 +477,7 @@ nav a {
 .contact img {
     display: block;
     margin: 0 auto;
-    width: 90%;
+    width: 70%;
     margin-bottom: 20px;
 }
 
@@ -576,6 +576,13 @@ nav a {
 
     #bio-last-image img {
         width: 50%;
+    }
+
+    .contact img {
+        float: left;
+        width: 280px;
+        margin-right: 15px;
+        margin-bottom: 5px;
     }
 }
 
