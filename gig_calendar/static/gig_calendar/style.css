@@ -552,14 +552,14 @@ nav a {
         display: block;
         font-size: 40pt;
         padding-top: 26px;
-        padding-left: 325px;
+        padding-left: 310px;
         margin-bottom: 0;
         font-weight: 500;
     }
 
     #page-header h3 {
         display: block;
-        font-size: 16pt;
+        font-size: 14pt;
         font-weight: 400;
         margin-top: -5px;
         font-family: 'EB Garamond', serif;
