@@ -5,20 +5,16 @@
     <div class="blog-detail-container">
         <div class="blog-detail-title">
             <h1 class="text-center">
-                {{ blog_post.title }}
+                {{ blog_post.title }}{% if blog_post.is_lesson %} <span class="badge">Lesson</span>
+            {% endif %}
             </h1>
             <p class="text-center">Published by Frank on <i>{{ blog_post.date }}</i></p>
-            {% if blog_post.is_lesson %}
-                <h3 class="text-center"><span class="badge badge-light">Lesson</span></h3>
-            {% endif %}
         </div>
         <div class="blog-detail-text">
             <p>{{ blog_post.text|linebreaks }}</p>
         </div>
         {% if blog_post.youtube_URL %}
-            <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/{{ blog_post.get_youtube_slug }}?rel=0" allowfullscreen></iframe>
-            </div>
+            <iframe id="homepage-video" src="https://www.youtube.com/embed/{{ blog_post.get_youtube_slug }}?rel=0" allowfullscreen></iframe>
         {% endif %}
         <div class="blog-detail-bottom">
             <h4 class="text-center">

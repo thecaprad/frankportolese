@@ -292,7 +292,7 @@ nav a {
 }
 
 #media-video iframe {
-    height: 200px;
+    height: 400px;
 }
 
 .blog-list-header {
@@ -507,9 +507,8 @@ nav a {
     text-decoration: underline;
 }
 
-/* DESKTOP QUERY */
-@media screen and (min-width: 820px) {
-
+/* TABLET PORTRAIT QUERY */
+@media screen and (min-width: 660px) {
     nav {
         width: 100%;
         height: 54px;
@@ -553,7 +552,7 @@ nav a {
         display: block;
         font-size: 40pt;
         padding-top: 26px;
-        padding-left: 345px;
+        padding-left: 325px;
         margin-bottom: 0;
         font-weight: 500;
     }
@@ -564,11 +563,30 @@ nav a {
         font-weight: 400;
         margin-top: -5px;
         font-family: 'EB Garamond', serif;
-        padding-left: 380px;
+        padding-left: 340px;
     }
 
     #homepage-video {
         height: 400px;
+    }
+
+    .bio-img-right-copy img, .bio-img-left-copy img {
+        width: 60%;
+    }
+
+    #bio-last-image img {
+        width: 50%;
+    }
+}
+
+/* DESKTOP/TABLET LANDSCAPE QUERY */
+@media screen and (min-width: 820px) {
+    #page-header h1 {
+        padding-left: 345px;
+    }
+
+    #page-header h3 {
+        padding-left: 380px;
     }
 
     .container {
@@ -596,28 +614,28 @@ nav a {
         width: 65%;
     }
 
-    .bio-img-right-copy img {
-        float: right;
+    .bio-img-right-copy img, .bio-img-left-copy img {
         margin-top: 6px;
         margin-left: 15px;
         margin-right: 15px;
         margin-bottom: 5px;
+        width: 30%;
+    }
+
+    .bio-img-right-copy img {
+        float: right;
     }
 
     .bio-img-left-copy img {
         float: left;
-        margin-top: 6px;
-        margin-left: 15px;
-        margin-right: 15px;
-        margin-bottom: 5px;
-    }
-
-    .bio-copy {
-        margin-bottom: 4rem;
     }
 
     #bio-last-image img {
         width: 40%;
+    }
+
+    .bio-copy {
+        margin-bottom: 4rem;
     }
 
     .contact img {
