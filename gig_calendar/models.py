@@ -69,7 +69,7 @@ class BlogPost(models.Model):
 
     @property
     def preview_url(self):
-        return f"https://www.frankportolese.com/blog/post/{self.id}/"
+        return "https://www.frankportolese.com/blog/post/{}/".format(self.id)
 
     def __str__(self): # 'Can You HEAR It? on 04/12/2014'
         return "{} on {}".format(self.title, self.date)
