@@ -1,8 +1,11 @@
 from django.contrib import admin
 from .models import Venue, Gig, BlogPost
+from django.utils.html import format_html
 
-# Register your models here.
 
 admin.site.register(Venue)
 admin.site.register(Gig)
-admin.site.register(BlogPost)
+
+@admin.register(BlogPost)
+class BlogPost(admin.ModelAdmin):
+	readonly_fields = ('preview_url',)

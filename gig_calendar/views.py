@@ -1,5 +1,5 @@
 import datetime
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from .models import Venue, Gig, BlogPost
 
 def gig_list(request):
@@ -16,7 +16,7 @@ def gig_detail(request, gig_id):
     return render(request, 'gig_calendar/gig_detail.html', {'gig': gig})
 
 def blog_list(request):
-    blog_posts = BlogPost.objects.all().order_by('-date')
+    blog_posts = BlogPost.objects.filter(published=True).order_by('-date')
     return render(
         request,
         'gig_calendar/blog_list.html',
@@ -25,6 +25,8 @@ def blog_list(request):
 
 def blog_post_detail(request, blog_post_id):
     blog_post = get_object_or_404(BlogPost, id=blog_post_id)
+    if not blog_post.published and not request.user.is_superuser:
+        return redirect('blog_list')
     return render(
         request, 
         'gig_calendar/blog_post_detail.html', 

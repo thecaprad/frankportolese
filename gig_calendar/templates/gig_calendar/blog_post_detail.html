@@ -1,27 +1,33 @@
-{% extends 'gig_calendar/base.html' %}
-{% load static %}
-
-{% block content %}
-    <div class="blog-detail-container">
-        <div class="blog-detail-title">
-            <h1 class="text-center">
-                {{ blog_post.title }}{% if blog_post.is_lesson %} <span class="badge">Lesson</span>
-            {% endif %}
-            </h1>
-            <p class="text-center">Published by Frank on <i>{{ blog_post.date }}</i></p>
-        </div>
-        <div class="blog-detail-text">
-            <p>{{ blog_post.text|linebreaks }}</p>
-        </div>
-        {% if blog_post.youtube_URL %}
-            <iframe id="homepage-video" src="https://www.youtube.com/embed/{{ blog_post.get_youtube_slug }}?rel=0" allowfullscreen></iframe>
-        {% endif %}
-        <div class="blog-detail-bottom">
-            <h4 class="text-center">
-                ⇠
-                <a href="{% url 'blog_list' %}">Back to all blog posts</a>
-            </h4>
-        </div>
-    </div>
-    <br><br><br>
+{% extends 'gig_calendar/base.html' %} {% load static %} {% block content %}
+<div class="blog-detail-container">
+  {% if not blog_post.published %}
+  <div class="alert alert-info" role="alert" style="text-align: center">
+    [Draft] This blog post is currently unpublished
+  </div>
+  {% endif %}
+  <div class="blog-detail-title">
+    <h1 class="text-center">
+      {{ blog_post.title }}{% if blog_post.is_lesson %} <span class="badge">Lesson</span>
+      {% endif %}
+    </h1>
+    <p class="text-center">Published by Frank on <i>{{ blog_post.date }}</i></p>
+  </div>
+  <div class="blog-detail-text">
+    <p>{{ blog_post.text|linebreaks }}</p>
+  </div>
+  {% if blog_post.youtube_URL %}
+  <iframe
+    id="homepage-video"
+    src="https://www.youtube.com/embed/{{ blog_post.get_youtube_slug }}?rel=0"
+    allowfullscreen
+  ></iframe>
+  {% endif %}
+  <div class="blog-detail-bottom">
+    <h4 class="text-center">
+      ⇠
+      <a href="{% url 'blog_list' %}">Back to all blog posts</a>
+    </h4>
+  </div>
+</div>
+<br /><br /><br />
 {% endblock %}

@@ -31,6 +31,7 @@ class Gig(models.Model):
         return "{} on {}".format(self.venue, self.date)
 
 class BlogPost(models.Model):
+    published = models.BooleanField(default=False)
     date = models.DateField(
         blank=False,
         null=False,
@@ -65,6 +66,10 @@ class BlogPost(models.Model):
 
     def get_youtube_slug(self):
         return self.youtube_URL[-11:]
+
+    @property
+    def preview_url(self):
+        return f"https://www.frankportolese.com/blog/post/{self.id}/"
 
     def __str__(self): # 'Can You HEAR It? on 04/12/2014'
         return "{} on {}".format(self.title, self.date)
