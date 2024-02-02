@@ -11,6 +11,9 @@ class Venue(models.Model):
         google_address_step_2 = google_address_step_1.replace(",", "%2C")
         return google_query + google_address_step_2
     
+    class Meta:
+        ordering = ('name',)
+
     def __str__(self):
         return self.name
 
