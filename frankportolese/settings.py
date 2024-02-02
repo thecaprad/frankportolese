@@ -5,7 +5,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 with open('SECRET_KEY.txt') as f:
     SECRET_KEY = f.read().strip()
 
-if platform.node() == "Coreys-MacBook-Air.local":
+if platform.node() == "coreys-air.lan":
     DEBUG = True
     ALLOWED_HOSTS = ['127.0.0.1', '10.0.1.4']
 else:
