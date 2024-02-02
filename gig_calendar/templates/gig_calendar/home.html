@@ -1,41 +1,37 @@
-{% extends 'gig_calendar/base.html' %}
-{% load static %}
+{% extends 'gig_calendar/base.html' %} {% load static %} {% block content %}
+<div class="container">
+  <!-- Upcoming gigs -->
+  {% if three_possible_future_gigs %}
+  <div class="alert alert-info" role="alert">
+    Upcoming shows: {% for gig in three_possible_future_gigs %}
+    <a href="{% url 'gig_detail' gig.id %}"> {{ gig.venue }} ({{ gig.date|date:"M. j" }}) </a>
+    {% if not forloop.last %} | {% endif %} {% endfor %}
+  </div>
+  {% else %}
+  <!-- Show latest blog post if no gigs -->
+  <div class="alert">
+    Lastest blog post:
+    <a href="{% url 'blog_post_detail' latest_blog_post.id %}"
+      >{{ latest_blog_post.title }} ({{ latest_blog_post.date }})</a
+    >
+  </div>
+  {% endif %}
 
-{% block content %}
-    <div class="container">
-        <!-- Upcoming gigs -->
-        {% if three_possible_future_gigs %}
-        <div class="alert alert-info" role="alert">
-                Upcoming shows: 
-                {% for gig in three_possible_future_gigs %}
-                    <a href="{% url 'gig_detail' gig.id %}">
-                        {{ gig.venue }}
-                        ({{ gig.date|date:"M. j" }})
-                    </a>
-                    {% if not forloop.last %}
-                        |
-                    {% endif %}
-                {% endfor %}
-        </div>
-        {% else %}
-        <!-- Show latest blog post if no gigs -->
-            <div class="alert">
-                Lastest blog post: <a href="{% url 'blog_post_detail' latest_blog_post.id %}">{{ latest_blog_post.title }} ({{ latest_blog_post.date }})</a>
-            </div>
-        {% endif %}
-
-        <!-- Welcome message -->
-        <h1 class="greeting" style="margin-top: 1.25rem; margin-bottom: .5rem; font-weight: 200;">
-            Hello and welcome to my website.
-        </h1>
-        <p style="margin-top: 0;">
-            I am a Jazz guitar player residing in Southwest Florida. Prior to my relocation down here in Paradise, I spent over 40 years as a part of the thriving music scene in Chicago. I performed with the best of the best, recorded three CDs and written two books. As an educator, I've passed down what I've learned from the greats.
-        </p>
-        <p>
-            This site is where I'll post my gig calendar, my personal blog musings and links to my performing/instructional videos. <i>Thanks for visiting — don't be a stranger!</i>
-        </p>
-        <!-- Video -->
-        <iframe id="homepage-video" src="https://www.youtube.com/embed/5EltYqjD6fM?rel=0" allowfullscreen></iframe>
-    </div>
-    <br><br><br>
+  <!-- Welcome message -->
+  <h1 class="greeting" style="margin-top: 1.25rem; margin-bottom: 0.5rem; font-weight: 200">
+    Hello and welcome to my website.
+  </h1>
+  <p style="margin-top: 0">
+    I am a Jazz guitar player residing in Southwest Florida. Prior to my relocation down here in Paradise, I spent over
+    40 years as a part of the thriving music scene in Chicago. I performed with the best of the best, recorded three CDs
+    and wrote two books. As an educator, I've passed down what I've learned from the greats.
+  </p>
+  <p>
+    This site is where I'll post my gig calendar, my personal blog musings and links to my performing/instructional
+    videos. <i>Thanks for visiting — don't be a stranger!</i>
+  </p>
+  <!-- Video -->
+  <iframe id="homepage-video" src="https://www.youtube.com/embed/5EltYqjD6fM?rel=0" allowfullscreen></iframe>
+</div>
+<br /><br /><br />
 {% endblock %}
