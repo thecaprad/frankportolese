@@ -14,6 +14,12 @@
                 </p>
             {% endif %}
 
+            {% if gig.info_URL %}
+                <p class="center">
+                    <i><a href="{{ gig.info_URL }}">Click here</a> for the venue's website</i>
+                </p>
+            {% endif %}
+
             </p>
             {% if gig.description %}
                 {{ gig.description|linebreaks }}
