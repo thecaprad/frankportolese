@@ -25,7 +25,7 @@ def blog_list(request):
 
 def blog_post_detail(request, blog_post_id):
     blog_post = get_object_or_404(BlogPost, id=blog_post_id)
-    if not blog_post.published and not request.user.is_superuser:
+    if not blog_post.published and not request.user.is_staff:
         return redirect('blog_list')
     return render(
         request, 
